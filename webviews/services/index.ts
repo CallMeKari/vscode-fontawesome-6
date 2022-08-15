@@ -7,7 +7,8 @@
     regular = 'regular',
     light = 'light',
     brands = 'brands',
-    duotone = 'duotone'
+    duotone = 'duotone',
+    thin = 'thin'
 }
 
 /**
@@ -19,7 +20,8 @@
     [IconStyle.regular]: 'far',
     [IconStyle.light]: 'fal',
     [IconStyle.brands]: 'fab',
-    [IconStyle.duotone]: 'fad'
+    [IconStyle.duotone]: 'fad',
+    [IconStyle.thin]: 'fat'
 };
 
 /**
