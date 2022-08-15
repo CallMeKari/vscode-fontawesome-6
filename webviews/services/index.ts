@@ -16,12 +16,12 @@
  * @see https://fontawesome.com/how-to-use
  */
  export const iconStylePrefix: {[style in IconStyle]: string} =  {
-    [IconStyle.solid]: 'fas',
-    [IconStyle.regular]: 'far',
-    [IconStyle.light]: 'fal',
-    [IconStyle.brands]: 'fab',
-    [IconStyle.duotone]: 'fad',
-    [IconStyle.thin]: 'fat'
+    [IconStyle.solid]: 'fa-solid',
+    [IconStyle.regular]: 'fa-regular',
+    [IconStyle.light]: 'fa-light',
+    [IconStyle.brands]: 'fa-brands',
+    [IconStyle.duotone]: 'fa-duotone',
+    [IconStyle.thin]: 'fa-thin'
 };
 
 /**

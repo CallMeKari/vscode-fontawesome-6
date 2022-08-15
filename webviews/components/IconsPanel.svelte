@@ -30,7 +30,7 @@
 <div role="group">
   <span role="contentinfo"
     ><small
-      >Showing <b>{iconList.length}</b> of {totalEntries} - {faVersion}</small
+      >Showing <b>{iconList.length}</b> of {totalEntries}</small
     ></span
   ><br />
   <div class="mt1">

@@ -10,7 +10,7 @@
 </script>
 
 <Clipboard
-  text={labelType === "iconClassname" ? iconCode : iconUnicode}
+  text={labelType === "iconClassname" ? '<i class="'+iconCode+'"></i>' : 'content: "\\'+iconUnicode+'";'}
   let:copy
   on:copy={() => {
     vscode.postMessage({
@@ -23,17 +23,18 @@
 >
   <div
     role="button"
-    class="icon"
-    title={`${iconLabel} - ${iconStyle}/${iconStylePrefix}`}
+    class="icon align-middle"
     on:click={copy}
   >
     <span class="inner">
-      <i class={iconCode} />
+      <i class={iconCode}></i>
+      <div class="text-center name-container icon-label">{iconLabel}</div>
+      <div class="text-center name-container icon-style">{iconStyle}</div>
       <div class="text-center name-container">
         {#if labelType === "iconClassname"}
           <code>{iconCode}</code>
         {:else if labelType === "iconUnicode"}
-          <code>{iconUnicode}</code>
+          <code>{`\\${iconUnicode}`}</code>
         {/if}
       </div>
     </span>
@@ -63,12 +64,12 @@
     }
 
     .icon .inner i {
-      font-size: 20vw !important;
+      font-size: 10vw !important;
       padding: 10px 10px 3% 10px !important;
     }
 
     .icon .inner code {
-      font-size: 4vw !important;
+      font-size: 2vw !important;
     }
   }
 
@@ -91,18 +92,30 @@
     overflow: scroll;
   }
 
+  .icon .inner .icon-label {
+    font-size: 3vw !important;
+    font-family: var(--vscode-editor-font-family);
+    color: var(--vscode-foreground);
+  }
+
+  .icon .inner .icon-style {
+    font-size: 2vw !important;
+    font-family: var(--vscode-editor-font-family);
+    color: var(--vscode-foreground);
+    text-transform: uppercase;
+  }
+
   .icon .inner .name-container::-webkit-scrollbar {
     display: none;
   }
 
   .icon .inner i {
-    font-size: 15vw;
+    font-size: 10vw;
     padding: 10px 10px 3% 10px;
   }
 
   .icon .inner code {
-    font-size: 3vw;
-    white-space: nowrap;
+    font-size: 2vw;
     max-width: 100%;
     padding: 2px;
     border-radius: 3px;
