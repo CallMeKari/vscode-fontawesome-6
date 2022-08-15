@@ -6,7 +6,7 @@
   "icon": "extension_logo.png",
   "repository": {
     "type": "git",
-    "url": "https://github.com/TOMIVERGARA/vscode-fontawesome-gallery"
+    "url": "https://github.com/CallMeKari/vscode-fontawesome-gallery.git"
   },
   "publisher": "callmekari",
   "author": {
